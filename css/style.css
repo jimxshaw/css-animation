@@ -1,4 +1,7 @@
 body {
+  animation: GoBackground 4s linear infinite;
+  -moz-animation: GoBackground 4s linear infinite;
+  -webkit-animation: GoBackground 4s linear infinite;
   background: #000 url(../img/bg.jpg) repeat-x 0 0;
   height: 100%;
 }
@@ -17,9 +20,9 @@ body {
 }
 
 #wheel-front {
-  animation: GoWheel 5s linear 0s infinite;
-  -moz-animation: GoWheel 5s linear 0s infinite;
-  -webkit-animation: GoWheel 5s linear 0s infinite;
+  animation: GoWheel 3s linear 0s infinite;
+  -moz-animation: GoWheel 3s linear 0s infinite;
+  -webkit-animation: GoWheel 3s linear 0s infinite;
   background: url(../img/wheel.png) no-repeat;
   float: left;
   height: 80px;
@@ -29,9 +32,9 @@ body {
 }
 
 #wheel-back {
-  animation: GoWheel 5s linear 0s infinite;
-  -moz-animation: GoWheel 5s linear 0s infinite;
-  -webkit-animation: GoWheel 5s linear 0s infinite;
+  animation: GoWheel 3s linear 0s infinite;
+  -moz-animation: GoWheel 3s linear 0s infinite;
+  -webkit-animation: GoWheel 3s linear 0s infinite;
   background: url(../img/wheel.png) no-repeat;
   float: left;
   height: 80px;
@@ -40,22 +43,66 @@ body {
   margin-top: -75px;
 }
 
+/* Animations */
 @keyframes GoWheel {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(-360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 @-moz-keyframes GoWheel {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(-360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 @-webkit-keyframes GoWheel {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(-360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
+@keyframes GoBackground {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1000px 0px;
+  }
+}
 
+@-moz-keyframes GoBackground {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1000px 0px;
+  }
+}
+
+@-webkit-keyframes GoBackground {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1000px 0px;
+  }
+}
+
+.pause {
+  animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+}
 
 
 
